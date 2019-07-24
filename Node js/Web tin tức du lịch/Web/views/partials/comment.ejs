@@ -1,0 +1,43 @@
+<!-- Comments Form -->
+<hr/>
+<div class="card my-4 col-lg-12 col-md-12 col-sm-12">
+    <form action="?users=comment" method="POST" class="needs-validation" novalidate>
+        <h5 class="card-header">Để lại bình luận của bạn :</h5>
+        <div class="card-body">
+            <div class="form-group">
+                <textarea class="form-control" name="comment" placeholder="Comment" rows="3" required></textarea>
+                <div class="invalid-feedback">Bạn chưa comment.</div>
+            </div>
+        </div>
+        <div style="float:right;margin-right:20px;margin-bottom: 30px;"><input type="submit" value="Comment" class="btn btn-info"></div>
+    </form>
+</div>
+<!-- Comments Display-->
+<!-- Single Comment -->
+<section id="comment-area" class="col-lg-12 col-md-12 col-sm-12">
+    <!--Comment Area-->
+
+</section>
+
+
+<!-- scrip kiểm tra form -->
+<script>
+    // Disable form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>

@@ -1,0 +1,55 @@
+<!----------------------------------------Thư viện UI Version 01------------------------------------------------------>
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/vendor/jquery-easing/jquery.easing.js" async></script>
+<script src="/vendor/magnific-popup/jquery.magnific-popup.js" async></script>
+
+<!-- Custom scripts for this templates -->
+<script src="/js/creative.js" async></script>
+
+
+<!----------------------------------------Thư viện UI Version 02------------------------------------------------------>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/css/bootstrap4/popper.js"></script>
+<script src="/css/bootstrap4/bootstrap.min.js"></script>
+<script src="/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/plugins/easing/easing.js"></script>
+<script src="/js/custom.js"></script>
+
+<!-- Thư viện Jquery & Ajax-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
+<!--Load review - like - share - comment -->
+<script src="/js/home-page/load-review-like-share.js"></script>
+<script src="/js/home-page/load-comment.js"></script>
+
+<!--Scriptseach_news-->
+<script>
+    function search_news() {
+        $(".blog_post").remove();
+        $.ajax({
+            url: '/search_news',
+            data: {
+                input: $('#sidebar_search_input').val()
+
+            },
+            error: function () {
+                $(".blog_post").remove();
+                $('.blog_post').html('Không có kết quả');
+            },
+            dataType: 'json',
+            success: function (data) {
+                console.log(data.server);
+                $("#blog_parameters").html(data.server)
+            },
+            type: 'POST'
+        });
+    }
+</script>
+<!--Thư viện Like_Share_Comment_Review-->
+<script src="/js/Like_Share_Comment_Review/interactive.js"></script>
+<!-- Script load new page-->
+<script src="/js/new-page/load-new-page.js"></script>

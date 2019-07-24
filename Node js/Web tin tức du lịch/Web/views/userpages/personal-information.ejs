@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cộng đồng cung cấp Thông tin du lịch bốn phương Việt Nam hấp dẫn chất lượng hàng đầu Đông Nam Á - Chuyên trang cung cấp thông tin du lịch Việt Nam :
+          Du lịch Đà Lạt, Kinh nghiệm du lịch Đà Lạt, Du lịch Hà Nội, Du lịch Huế, Du lịch Đà Nẵng, Du lịch Quảng Bình, Du lịch Nha Trang, Du lịch Phan Thiết, Du lịch SaPa, Du lịch Vũng Tàu">
+    <meta name="author" content="<%= domain %>">
+    <meta name="keywords"
+          content="Thông tin du lịch, Cẩm nang du lịch, Kinh nghiệm du lịch, Thông tin du lịch bốn phương Việt Nam hấp dẫn chất lượng hàng đầu Đông Nam Á">
+    <link rel="canonical" href="https://thongtindulich.azurewebsites.net/user/personal-information">
+    <!--Verify Google Master Tool -->
+    <meta name="google-site-verification" content="_qsaaDP9sVp1Z0hVtj-tGKbViCma_oqvl5p7Fjzxo8o"/>
+    <title>Trang quản lý tài khoản - Thông tin cá nhân</title>
+
+    <!--Thêm thư viện css & js-->
+    <%- include ../partials/account_manager_first_library.ejs %>
+    <script>
+        var d = new Date();
+        document.getElementById("nut").innerHTML = d.toString();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(":file").click(function () {
+                $('#submitBtn').attr('disabled', false);
+            });
+
+        });
+    </script>
+
+</head>
+
+<body class="">
+<div class="wrapper ">
+    <!--Thêm navBar-->
+    <div class="sidebar" data-color="white" data-active-color="danger">
+        <!--
+            Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+        <div class="logo">
+            <a href="<%= domain %>" class="simple-text logo-mini">
+                <div class="logo-image-small">
+                    <img src="../assets/img/logo-small.png">
+                </div>
+            </a> <a href="?users=account-manager" class="simple-text logo-normal"> Quản lý tài khoản
+
+            </a>
+        </div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li>
+                    <a href="?users=account-manager"> <i class="nc-icon nc-bank"></i>
+                        <p>Tổng quan</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="?users=personal-information"> <i class="nc-icon nc-single-02"></i>
+                        <p>Thông tin cá nhân</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?users=list-post"> <i class="nc-icon nc-tile-56"></i>
+                        <p>Danh sách bài viết</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="?users=create-post"> <i class="fa fa-plus-circle" aria-hidden="true"></i></i>
+                        <p>Tạo bài viết</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+            <div class="container-fluid">
+                <div class="navbar-wrapper">
+                    <div class="navbar-toggle">
+                        <button type="button" class="navbar-toggler">
+                            <span class="navbar-toggler-bar bar1"></span> <span
+                                    class="navbar-toggler-bar bar2"></span> <span
+                                    class="navbar-toggler-bar bar3"></span>
+                        </button>
+                    </div>
+                    <a class="navbar-brand" href="/#pagetop" style="color:orangered;">Về trang chủ</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar navbar-kebab"></span> <span
+                            class="navbar-toggler-bar navbar-kebab"></span> <span
+                            class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                    <form>
+                        <div class="input-group no-border">
+                            <input type="text" value="" class="form-control" placeholder="Search...">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <i class="nc-icon nc-zoom-split"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn-magnify" href="#pablo"> <i class="nc-icon nc-bell-55"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block">Thông báo</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item btn-rotate dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                                        class="nc-icon nc-layout-11"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block">Quản lý bài viết</span>
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="?users=account-manager">Tổng quan</a>
+                                <a class="dropdown-item" href="?users=personal-information">Thông tin cá nhân</a>
+                                <a class="dropdown-item" href="?users=list-post">Danh sách bài viết</a>
+                                <a class="dropdown-item" href="?users=create-post">Tạo bài viết</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <!--<a class="nav-link btn-rotate" href="#pablo"> <i class="nc-icon nc-settings-gear-65"></i>-->
+                            <!--   <p>-->
+                            <!--      <span class="d-lg-none d-md-block">Account</span>-->
+                            <!--   </p>-->
+                            <!--</a>-->
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                                        class="nc-icon nc-settings-gear-65"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block">Quản lý tài khoản</span>
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="?users=account-information">Thông tin tài khoản</a> <a
+                                        class="dropdown-item" href="?users=change-password">Đổi mật khẩu</a> <a
+                                        class="dropdown-item" href="/loginregister/logout">Đăng xuất</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <div class="content">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--Thẻ Avatar-->
+                    <div class="card card-user">
+                        <div class="image">
+                            <img src="../assets/img/damir-bosnjak.jpg" alt="...">
+                        </div>
+                        <div class="card-body" style="height: auto">
+                            <div class="author">
+                                <a href="#"> <img class="avatar border-gray" src="<%= data[0].Image %>" alt="...">
+                                    <h5 class="title">Administrator</h5>
+                                </a>
+                                <p class="description">
+                                    @admin
+                                </p>
+                                <div class="custom-file">
+                                    <form action="?users=personal-information" method="post"
+                                          enctype="multipart/form-data">
+                                        <input type="file" name="avatar" id="customFile" required>
+                                        <label>Choose file</label>
+                                        <input type="submit" class="btn btn-primary" id="submitBtn" disabled/>
+                                    </form>
+                                    <!--                                    <form action="?users=personal-information" method="post">-->
+                                    <!--                                        <button type="submit" class="btn btn-primary"></button>-->
+                                    <!--                                    </form>-->
+                                </div>
+                            </div>
+                            <div>
+                                <p class="description text-lg-center">
+
+                                </p>
+                            </div>
+                            <div>
+                                <p class="description text-lg-center">
+                                    "Bạn càng đọc nhiều, bạn càng biết nhiều. Bạn càng học nhiều, bạn càng đi nhiều."
+                                </p>
+                            </div>
+                        </div>
+                        <divs class="card-footer">
+                            <hr>
+                            <div class="button-container">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 col-6 ml-auto">
+                                        <h5>10 <br>
+                                            <small>Bài viết</small>
+                                        </h5>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
+                                        <h5>0.1GB <br>
+                                            <small>Sử dụng</small>
+                                        </h5>
+                                    </div>
+                                    <div class="col-lg-3 mr-auto">
+                                        <h5>999$ <br>
+                                            <small>Trong ví</small>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </divs>
+                    </div>
+                    <!--Thẻ bạn bè-->
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Bạn bè</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled team-members">
+                                <% bigdata.forEach(function (pt) {
+                                data[0].FriendList.forEach(function(phantu) {
+                                if ( pt._id.toString() == phantu.toString()) {
+                                %>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-2 col-2">
+                                                <div class="avatar">
+                                                    <img src="<%= pt.Image %>"
+                                                         alt="Circle Image"
+                                                         class="img-circle img-no-padding img-responsive">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 col-7">
+                                                <%= pt.UserName %> <br/> <span class="text-muted">
+                                                <small>Offline</small>
+                                            </span>
+                                            </div>
+                                            <div class="col-md-3 col-3 text-right">
+                                                <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i
+                                                            class="fa fa-envelope"></i></btn>
+                                            </div>
+                                        </div>
+                                    </li>
+                                <% }
+                                })
+                                }) %>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Thẻ tác giả yêu thích-->
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Tác giả yêu thích</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled team-members">
+
+                                <% bigdata.forEach(function (pt) {
+                                data[0].FavoriteAuthorList.forEach(function(phantu) {
+                                if ( pt._id == phantu) {
+                                %>
+
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-2 col-2">
+                                                <div class="avatar">
+                                                    <img src="<%= pt.Image %>">
+                                                    alt="Circle Image"
+                                                    class="img-circle img-no-padding img-responsive">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 col-7">
+                                                <%= pt.UserName %> <br/> <span class="text-muted">
+                                                <small>Offline</small>
+                                            </span>
+                                            </div>
+                                            <% var k = 0;
+                                            for(var i = 0 ; i < baiviet.length ; i++) {
+                                            if (((baiviet[i]).PostBy == pt._id) && ((baiviet[i]).DateCreated > ((data[0].LovePostList)[i])[1])) {
+                                                k = k + 1; %>
+                                            <div class="col-md-3 col-3 text-right">
+                                                <btn id="nut"
+                                                     class="btn btn-sm btn-outline-info btn-round btn-icon"><i
+                                                            id="nut" class="fa fa-bell-o""
+                                                    aria-hidden="true"></i></btn>
+                                            </div>
+                                            <% }
+                                                break;
+                                            }
+                                            if (k == 0){ %>
+                                                <div class="col-md-3 col-3 text-right">
+                                                    <btn id="nut"
+                                                         class="btn btn-sm btn-outline-info btn-round btn-icon"><i
+                                                                id="nut"
+                                                                aria-hidden="true"></i></btn>
+                                                </div>
+                                            <% }
+                                            %>
+                                        </div>
+
+
+                                    </li>
+                                <% }
+                                })
+                                }) %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thẻ thông tin cá nhân-->
+                <div class="col-md-8">
+                    <div class="card card-user">
+                        <div >
+                            <p style="text-align: left;color: #ff231c">
+                                <% if( t == 3) { %>
+                                    Mật khẩu không chính xác.Hãy nhập lại
+                                <% } else  if ( t == 1) {%>
+                                        Cập nhật thông tin thành công
+                                <% } else if (t == 2) {%>
+                                Đã thay đổi mật khẩu
+                                <% }%>
+                            </p>
+                        </div>
+                        <div class="card-header">
+                            <h5 class="card-title">Chỉnh sữa thông tin</h5>
+                        </div>
+                        <div class="card-body">
+                            <% data.forEach(function(pt) { %>
+
+                                <form action="/users/personal-information" method="post">
+                                    <div class="row">
+                                        <div class="col-md-5 pr-1">
+                                            <div class="form-group">
+                                                <label>Cơ quan/Công ty/Tổ chức : </label> <input name="Company"
+                                                                                                 type="text"
+                                                                                                 class="form-control"
+                                                                                                 placeholder="Nơi bạn đang làm việc/học tập"
+                                                                                                 value="<%= pt.Company %>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 px-1">
+                                            <div class="form-group">
+                                                <label>Tên người dùng</label> <input name="UserName" type="text"
+                                                                                     class="form-control"
+                                                                                     placeholder="Username"
+                                                                                     value="<%= pt.UserName %>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pl-1">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Địa chỉ Email</label> <input
+                                                        name="Email"
+                                                        type="email" class="form-control" placeholder="Email"
+                                                        value="<%= pt.Email %>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <div class="form-group">
+                                                <label>Mật khẩu</label> <input name="password" type="password"
+                                                                               class="form-control"
+                                                                               placeholder="Mật khẩu" disabled
+                                                                               value="<%= pt.password %>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <h6 class="card-title">Thay đổi mật khẩu:</h6>
+                                            <div class="form-group">
+                                                <label>Nhập mật khẩu cần thay đổi</label> <input name="password1" type="password"
+                                                                                        class="form-control"
+                                                                                        placeholder="Mật khẩu"
+                                                                                        >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <div class="form-group">
+                                                <label>Nhập lại mật khẩu</label> <input name="password2"
+                                                                                            type="password"
+                                                                                            class="form-control"
+                                                                                            placeholder="Mật khẩu"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <div class="form-group">
+                                                <label>Mật khẩu mới</label> <input name="password3"
+                                                                                            type="password"
+                                                                                            class="form-control"
+                                                                                            placeholder="Mật khẩu"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <div class="form-group">
+                                                <label>Họ và Chữ lót</label> <input name="LastName" type="text"
+                                                                                    class="form-control"
+                                                                                    placeholder="Company"
+                                                                                    value="<%= pt.LastName %>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 pl-1">
+                                            <div class="form-group">
+                                                <label>Tên</label> <input name="FirstName" type="text"
+                                                                          class="form-control"
+                                                                          placeholder="Last Name"
+                                                                          value="<%= pt.FirstName %>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Địa chỉ</label> <input name="Address" type="text"
+                                                                              class="form-control"
+                                                                              placeholder="Địa chỉ bạn đang ở"
+                                                                              value="<%= pt.Address %>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 pr-1">
+                                            <div class="form-group">
+                                                <label>Thành phố</label> <input name="CityProvince" type="text"
+                                                                                class="form-control"
+                                                                                placeholder="Thành phố bạn đang sống"
+                                                                                value="<%= pt.CityProvince %>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 px-1">
+                                            <div class="form-group">
+                                                <label>Quốc gia</label> <input name="Country" type="text"
+                                                                               class="form-control"
+                                                                               placeholder="Quốc gia nơi bạn sống"
+                                                                               value="<%= pt.Country %>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pl-1">
+                                            <div class="form-group">
+                                                <label>Postal Code</label> <input name="PostalCode" type="number"
+                                                                                  class="form-control"
+                                                                                  placeholder="ZIP Code"
+                                                                                  value="<%= pt.PostalCode %>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Mô tả bản thân </label> <textarea name="Description"
+                                                                                         class="form-control textarea"
+                                                                                         value="<%= pt.Description %>"><%= pt.Description %></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="update ml-auto mr-auto">
+                                            <button type="submit" class="btn btn-primary btn-round">Cập nhật
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            <% }) %>
+
+                        </div>
+                    </div>
+                    <!-- Thẻ bài viết yêu thích-->
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title"> Bài viết yêu thích</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                    <th>
+                                        Tiêu đề/Chủ đề
+                                    </th>
+                                    <th>
+                                        Tác giả
+                                    </th>
+                                    <th>
+                                        Ngày đánh dấu
+                                    </th>
+                                    <th>
+                                        Ngày cập nhật gần nhất
+                                    </th>
+
+                                    </thead>
+                                    <tbody>
+                                    <% baiviet.forEach(function (bv) { %>
+                                        <tr>
+                                            <td>
+                                                <%= bv.Title %>
+                                            </td>
+                                            <% bigdata.forEach(function (user) {
+                                            if (bv.PostBy == user._id) {
+                                            %>
+                                                <td>
+                                                    <%= user.UserName %>
+                                                </td>
+                                            <% }
+                                            }) %>
+                                            <td>
+                                                May, 22 2019
+                                            </td>
+                                            <td>
+                                                <%= bv.DateCreated.toDateString() %>
+                                            </td>
+                                        </tr>
+                                    <% }) %>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+            <!--Thêm footer-->
+            <%- include ../partials/footer_account_manager.ejs %>
+        </div>
+
+    </div>
+</div>
+<%- include ../partials/account_manager_last_library.ejs %>
+</body>
+
+</html>
+

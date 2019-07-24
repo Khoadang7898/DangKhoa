@@ -1,0 +1,364 @@
+<div class="interactive">
+
+    <ul class="interactive-list">
+        <!--Icon like-->
+
+        <li class="interactive_list_item">
+            <a id="like_icon">
+                <i id="unlike" class="far fa-thumbs-up fa-5x"></i>
+                <sup><span id="numberlike" class="badge badge-primary badge-pill">0</span>
+                </sup>
+            </a>
+        </li>
+
+        <!--Icon share-->
+
+        <li class="interactive_list_item">
+            <a>
+                <span id="share_icon" onclick="Share()"><i class="fas fa-share-alt"></i>
+                </span>
+                <sup><span id="numbershare" class="badge badge-primary badge-pill">0</span></sup>
+            </a>
+
+        </li>
+
+
+        <!--5 Icon star-->
+        <li class="interactive_list_item">
+            <a id="star_process">
+                <span id="star_icon_lists">
+                    <p id="rating" class="rating rating_1">
+                    <i id="star1" onclick="Checkstar('1'), process(1)" class="fa fa-star  fa-5x"></i>
+                    <i id="star2" onclick="Checkstar('2'), process(2)" class="far fa-star fa-5x"></i>
+                    <i id="star3" onclick="Checkstar('3'), process(3)" class="far fa-star fa-5x"></i>
+                    <i id="star4" onclick="Checkstar('4'), process(4)" class="far fa-star fa-5x"></i>
+                    <i id="star5" onclick="Checkstar('5'), process(5)" class="far fa-star fa-5x"></i>
+                    </p>
+                </span>
+            </a>
+        </li>
+        <!--        <script>-->
+        <!--            var startstar=1;-->
+        <!--            function process(star){-->
+        <!--                if(Number(startstar)>Number(star)){-->
+        <!--                    for(i=star+1;i<startstar+1;i++){-->
+        <!--                        let id="#star";-->
+        <!--                        let far="far fa-star fa-5x";-->
+        <!--                         id+=String(i);-->
+        <!--                          $(id).removeClass().addClass(far);-->
+        <!--                          console.log(id)-->
+        <!--                    }-->
+        <!--                }-->
+        <!--               for(i=1;i<star+1;i++){-->
+        <!--                var rating="rating rating_";-->
+        <!--                var fa="fa fa-star fa-5x";-->
+        <!--                var id="#star";-->
+        <!--                   id+=String(i);-->
+        <!--                   rating+=String(i);-->
+        <!--                   $(id).removeClass().addClass(fa);-->
+        <!--               }-->
+        <!--               $('#rating').removeClass().addClass(rating);-->
+        <!--               startstar=star;-->
+        <!--            }-->
+        <!--            // $(document).ready(function () {-->
+        <!--            //     $("#star_icon_lists").click(function(t){-->
+        <!--            //         console.log(t);-->
+        <!--            //     });-->
+        <!--            //     $('#star2').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_2');-->
+        <!--            //     $('#star2').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            //     $('#star3').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            //     $('#star4').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            //     $('#star5').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            // });-->
+        <!--            // $(document).click(function () {-->
+        <!--            //     $('#star2').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_2');-->
+        <!--            //     $('#star1').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_2');-->
+        <!--            //     $('#star3').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_2');-->
+        <!--            //     $('#star4').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_2');-->
+        <!--            //     $('#star5').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_2');-->
+        <!--            // });-->
+        <!--            // $(document).click(function () {-->
+        <!--            //     $('#star3').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_3');-->
+        <!--            //     $('#star2').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_3');-->
+        <!--            //     $('#star1').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_3');-->
+        <!--            //     $('#star4').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_3');-->
+        <!--            //     $('#star5').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_3');-->
+        <!--            // });-->
+        <!--            // $(document).click(function () {-->
+        <!--            //     $('#star4').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_4');-->
+        <!--            //     $('#star2').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_4');-->
+        <!--            //     $('#star1').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_4');-->
+        <!--            //     $('#star3').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_4');-->
+        <!--            //     $('#star5').addClass('far fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_4');-->
+        <!--            // });-->
+        <!--            // $(document).click(function () {-->
+        <!--            //     $('#star5').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            //     $('#star2').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            //     $('#star1').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            //     $('#star4').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            //     $('#star3').addClass('fa fa-star fa-5x');-->
+        <!--            //     $('#rating').addClass('rating rating_5');-->
+        <!--            // });-->
+
+
+        <!--            // document.getElementById("star1").addEventListener("click", star1_process)-->
+        <!--            // document.getElementById("star2").addEventListener("click", star2_process)-->
+        <!--            // document.getElementById("star3").addEventListener("click", star3_process)-->
+        <!--            // document.getElementById("star4").addEventListener("click", star4_process)-->
+        <!--            // document.getElementById("star5").addEventListener("click", star5_process)-->
+
+
+        <!--            // function star1_process() {-->
+        <!--                // document.getElementById("star_icon_lists").innerHTML = "<p class=\"rating rating_1\">\n" +-->
+        <!--                //     "                    <i id=\"star1\" onclick = \"Checkstar('1')\" class=\"fa fa-star  fa-5x\"></i>\n" +-->
+        <!--                //     "                    <i id=\"star2\" onclick = \"Checkstar('2')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--                //     "                    <i id=\"star3\" onclick = \"Checkstar('3')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--                //     "                    <i id=\"star4\" onclick = \"Checkstar('4')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--                //     "                    <i id=\"star5\" onclick = \"Checkstar('5')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--                //     "                    </p>"-->
+        <!--                // document.getElementById("star1").addEventListener("click", star1_process)-->
+        <!--                // document.getElementById("star2").addEventListener("click", star2_process)-->
+        <!--                // document.getElementById("star3").addEventListener("click", star3_process)-->
+        <!--                // document.getElementById("star4").addEventListener("click", star4_process)-->
+        <!--                // document.getElementById("star5").addEventListener("click", star5_process)-->
+        <!--            // }-->
+
+        <!--            // function star2_process() {-->
+        <!--            //     document.getElementById("star_icon_lists").innerHTML = "<p class=\"rating rating_2\">\n" +-->
+        <!--            //         "                    <i id=\"star1\" onclick = \"Checkstar('1')\" class=\"fa fa-star  fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star2\" onclick = \"Checkstar('2')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star3\" onclick = \"Checkstar('3')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star4\" onclick = \"Checkstar('4')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star5\" onclick = \"Checkstar('5')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    </p>"-->
+        <!--            //     document.getElementById("star1").addEventListener("click", star1_process)-->
+        <!--            //     document.getElementById("star2").addEventListener("click", star2_process)-->
+        <!--            //     document.getElementById("star3").addEventListener("click", star3_process)-->
+        <!--            //     document.getElementById("star4").addEventListener("click", star4_process)-->
+        <!--            //     document.getElementById("star5").addEventListener("click", star5_process)-->
+        <!--            // }-->
+        <!--            //-->
+        <!--            // function star3_process() {-->
+        <!--            //     document.getElementById("star_icon_lists").innerHTML = "<p class=\"rating rating_3\">\n" +-->
+        <!--            //         "                    <i id=\"star1\" onclick = \"Checkstar('1')\" class=\"fa fa-star  fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star2\" onclick = \"Checkstar('2')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star3\" onclick = \"Checkstar('3')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star4\" onclick = \"Checkstar('4')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star5\" onclick = \"Checkstar('5')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    </p>"-->
+        <!--            //     document.getElementById("star1").addEventListener("click", star1_process)-->
+        <!--            //     document.getElementById("star2").addEventListener("click", star2_process)-->
+        <!--            //     document.getElementById("star3").addEventListener("click", star3_process)-->
+        <!--            //     document.getElementById("star4").addEventListener("click", star4_process)-->
+        <!--            //     document.getElementById("star5").addEventListener("click", star5_process)-->
+        <!--            // }-->
+        <!--            //-->
+        <!--            // function star4_process() {-->
+        <!--            //     document.getElementById("star_icon_lists").innerHTML = "<p class=\"rating rating_4\">\n" +-->
+        <!--            //         "                    <i id=\"star1\" onclick = \"Checkstar('1')\" class=\"fa fa-star  fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star2\" onclick = \"Checkstar('2')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star3\" onclick = \"Checkstar('3')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star4\" onclick = \"Checkstar('4')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star5\" onclick = \"Checkstar('5')\" class=\"far fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    </p>"-->
+        <!--            //     document.getElementById("star1").addEventListener("click", star1_process)-->
+        <!--            //     document.getElementById("star2").addEventListener("click", star2_process)-->
+        <!--            //     document.getElementById("star3").addEventListener("click", star3_process)-->
+        <!--            //     document.getElementById("star4").addEventListener("click", star4_process)-->
+        <!--            //     document.getElementById("star5").addEventListener("click", star5_process)-->
+        <!--            // }-->
+        <!--            //-->
+        <!--            // function star5_process() {-->
+        <!--            //     document.getElementById("star_icon_lists").innerHTML = "<p class=\"rating rating_5\">\n" +-->
+        <!--            //         "                    <i id=\"star1\" onclick = \"Checkstar('1')\" class=\"fa fa-star  fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star2\" onclick = \"Checkstar('2')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star3\" onclick = \"Checkstar('3')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star4\" onclick = \"Checkstar('4')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    <i id=\"star5\" onclick = \"Checkstar('5')\" class=\"fa fa-star fa-5x\"></i>\n" +-->
+        <!--            //         "                    </p>"-->
+        <!--            //     document.getElementById("star1").addEventListener("click", star1_process)-->
+        <!--            //     document.getElementById("star2").addEventListener("click", star2_process)-->
+        <!--            //     document.getElementById("star3").addEventListener("click", star3_process)-->
+        <!--            //     document.getElementById("star4").addEventListener("click", star4_process)-->
+        <!--            //     document.getElementById("star5").addEventListener("click", star5_process)-->
+        <!--            // }-->
+
+        <!--            function Checkstar(star) {-->
+        <!--                console.log(star)-->
+        <!--                $.ajax({-->
+        <!--                    type: "POST",-->
+        <!--                    url: "/test_interactive/star",-->
+        <!--                    data: {-->
+        <!--                        star: star-->
+        <!--                    },-->
+        <!--                    dataType: "json",-->
+        <!--                    success: function (data) {-->
+        <!--                    },-->
+        <!--                    failure: function (errMsg) {-->
+        <!--                    }-->
+        <!--                });-->
+        <!--            }-->
+        <!--        </script>-->
+        </a>
+        </li>
+        <!--Icon Yêu thích-->
+        <li class="interactive_list_item">
+            <a id="lovepost">
+                <i id="love" class="fa fa-heart-o"></i>
+            </a>
+        </li>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <div class="row text-center" id="notelove"
+             style=" position: fixed; z-index: 1010101010101010101010; display: flex; background: #FFFFFF ; top: 40%; left: 40%;color: #0b0b0b">
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.ajax(
+                    {
+                        url: '/loginregister/checklove'
+                        , data: {}
+                        , error: function () {
+
+                        }
+                        , dataType: 'json'
+                        , type: "POST"
+                        , success: function (data) {
+                            if (data.data) {
+                                $("#lovepost").html(``)
+                                $("#lovepost").html(`<i id="unlove" class="fa fa-heart" style="color: red"></i>`)
+                            }
+                        }
+                    }
+                )
+            })
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function HuyNoteLove() {
+                $('#notelove').css({"display": "none"})
+            }
+
+            $('#lovepost').click(function () {
+                console.log("click")
+                console.log(getCookie("isL"))
+                if (getCookie("isL") == "false") {
+                    console.log("click1")
+                    $('#notelove').html(`     <div class="card " style="margin-top: 0px">
+                <div class="card-body">
+                    <h4 class="card-title" style="color: red">Thông báo!</h4>
+                    <p class="card-text">Vui lòng đăng nhập để yêu thích !</p>
+                </div>
+                <div class="card-footer" >
+                    <button onclick="HuyNoteLove()"  class="btn btn-primary" style="background-color: red;color: #FFFFFF"> x Hủy</button>
+                    <a href="/loginregister/login" class="btn btn-primary" style="background-color: darkblue;color: #FFFFFF">Đăng Nhập |-></a>
+
+                </div>
+        </div>
+`)
+                    $('#notelove').css({"display": "flex"})
+                } else {
+                    console.log("click2")
+                    if ($("#lovepost").children(":first")[0].id == "love") {
+                        $("#lovepost").html(``)
+
+                        $("#lovepost").html(`<i id="unlove" class="fa fa-heart" style="color: red"></i>`)
+                        $.ajax({
+                            url: '/loginregister/love', //url link lên server
+                            data: {
+                                love: "love"//data gửi lên server sẽ có trong req.body
+                            },
+                            error: function () {
+                                // $('#info').html('connect');nếu err thì lm j đó
+                            },
+                            dataType: 'json',
+                            success: function (data) {
+                                //data -> dữ liệu trả về res.json({})
+                                if (data.love) {
+                                    $("#lovepost").html(``)
+                                    $("#lovepost").html(`<i id="unlove" class="fa fa-heart" style="color: red"></i>`)
+                                }
+
+                            },
+                            type: 'POST' //phương thức Post
+                        });
+                    } else {
+
+                        $("#lovepost").html(``)
+                        $("#lovepost").html(` <i id="love" class="fa fa-heart-o"></i>`)
+                        $.ajax({
+                            url: '/loginregister/love',
+                            data: {
+                                love: "unlove"
+                            },
+                            error: function () {
+                                // $('#info').html('connect');
+                            },
+                            dataType: 'json',
+                            success: function (data) {
+                                if (data.unlove) {
+                                    $("#lovepost").html(``)
+                                    $("#lovepost").html(` <i id="love" class="fa fa-heart-o"></i>`)
+                                }
+                            },
+                            type: 'POST'
+                        });
+                    }
+                }
+
+
+            })
+
+        </script>
+    </ul>
+
+    <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=1294847024015348&autoLogAppEvents=1"></script>
+    <div id="fbr" class="fb-like" data-href="https://thongtindulich.azurewebsites.net/post/du-lich-nha-trang"
+         data-width=""
+         data-layout="button_count" data-action="like" data-size="large" data-show-faces="true"
+         data-share="true"></div>
+    <script>
+        $('#fbr').attr('data-href', window.location.href)
+    </script>
+</div>

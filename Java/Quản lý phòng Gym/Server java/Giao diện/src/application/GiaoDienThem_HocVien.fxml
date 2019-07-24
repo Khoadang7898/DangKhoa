@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_GiaoDienThem_HocVien">
+   <children>
+      <TextField fx:id="hovaten" layoutX="226.0" layoutY="30.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="diachi" layoutX="226.0" layoutY="140.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="sdt" layoutX="226.0" layoutY="177.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="chieucao" layoutX="226.0" layoutY="293.0" prefHeight="25.0" prefWidth="270.0" />
+      <CheckBox fx:id="Nam" layoutX="228.0" layoutY="68.0" mnemonicParsing="false" onAction="#dachon" prefHeight="17.0" prefWidth="61.0" text="Nam" />
+      <CheckBox fx:id="Nu" layoutX="303.0" layoutY="68.0" mnemonicParsing="false" onAction="#dachon" text="Nữ" />
+      <ChoiceBox id="ngay" fx:id="ngay" layoutX="261.0" layoutY="103.0" prefHeight="25.0" prefWidth="38.0" />
+      <Label layoutX="38.0" layoutY="34.0" text="Học và tên" />
+      <Label layoutX="38.0" layoutY="68.0" text="Giới tính" />
+      <Label layoutX="38.0" layoutY="107.0" text="Ngày tháng năm sinh" />
+      <Label layoutX="226.0" layoutY="107.0" text="Ngày" />
+      <Label layoutX="310.0" layoutY="107.0" text="Tháng" />
+      <ChoiceBox id="thang" fx:id="thang" layoutX="352.0" layoutY="103.0" prefHeight="25.0" prefWidth="38.0" />
+      <Label layoutX="407.0" layoutY="107.0" text="Năm" />
+      <ChoiceBox id="nam" fx:id="nam" layoutX="440.0" layoutY="103.0" prefHeight="25.0" prefWidth="57.0" />
+      <Label layoutX="39.0" layoutY="144.0" prefHeight="17.0" prefWidth="38.0" text="Địa chỉ" />
+      <Label layoutX="40.0" layoutY="181.0" text="Sdt" />
+      <ComboBox id="dichvu_themhvcombox" fx:id="dichvu_themdvcombox" layoutX="228.0" layoutY="215.0" prefHeight="25.0" prefWidth="270.0" promptText="Select One" />
+      <Label layoutX="41.0" layoutY="258.0" text="Huấn luyện viên" />
+      <Label layoutX="40.0" layoutY="219.0" text="Dịch vụ" />
+      <Label layoutX="41.0" layoutY="297.0" text="Chiều cao" />
+      <Label layoutX="41.0" layoutY="333.0" text="Cân nặng" />
+      <TextField fx:id="cannang" layoutX="227.0" layoutY="329.0" prefHeight="25.0" prefWidth="270.0" />
+      <Button fx:id="luu" layoutX="219.0" layoutY="415.0" mnemonicParsing="false" onAction="#themhocvien" prefHeight="25.0" prefWidth="80.0" text="Lưu" />
+      <ComboBox id="dichvu_hlvcombox" fx:id="dichvu_hlvcombox" layoutX="228.0" layoutY="254.0" prefHeight="25.0" prefWidth="270.0" promptText="Select One" />
+      <Label layoutX="42.0" layoutY="370.0" text="Hình ảnh" />
+      <TextField fx:id="hinhanh" layoutX="227.0" layoutY="366.0" onAction="#chonanh" prefHeight="25.0" prefWidth="195.0" />
+      <Button fx:id="chonfileanh" layoutX="430.0" layoutY="365.0" mnemonicParsing="false" onAction="#chonanh" text="Chọn File" />
+   </children>
+</AnchorPane>

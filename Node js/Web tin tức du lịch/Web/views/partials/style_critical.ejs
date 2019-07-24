@@ -1,0 +1,173 @@
+<style>
+
+    body {
+        margin: 0;
+        font-family: Merriweather, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff
+    }
+
+    body {
+        background: url(../images/bg-root.webp) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover
+    }
+    .col-lg-10, .col-lg-6, .col-lg-8, .col-md-6 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px
+    }
+
+    @media (min-width: 768px) {
+        .col-md-6 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%
+        }
+    }
+
+    @media (min-width: 992px) {
+        .col-lg-6 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%
+        }
+
+        .col-lg-8 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+            max-width: 66.66667%
+        }
+
+        .col-lg-10 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 83.33333%;
+            flex: 0 0 83.33333%;
+            max-width: 83.33333%
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        color: #212529;
+        text-align: center;
+        vertical-align: middle;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem
+    }
+
+    .btn-info {
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #17a2b8
+    }
+
+    .collapse:not(.show) {
+        display: none
+    }
+
+    .card {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+        margin-top:200px;
+    }
+
+    .card-body {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem
+    }
+
+    .card-title {
+        margin-bottom: .75rem
+    }
+
+    .card-footer {
+        padding: .75rem 1.25rem;
+        background-color: rgba(0, 0, 0, .03);
+        border-top: 1px solid rgba(0, 0, 0, .125)
+    }
+
+    .card-footer:last-child {
+        border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px)
+    }
+
+    .card-img-top {
+        width: 100%;
+        border-top-left-radius: calc(.25rem - 1px);
+        border-top-right-radius: calc(.25rem - 1px)
+    }
+
+    .card-deck {
+        flex-wrap: wrap;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .card-deck .card {
+        margin-bottom: 15px
+    }
+
+    @media (min-width: 576px) {
+        .card-deck {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            display: flex;
+            flex-flow: row wrap;
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        .card-deck .card {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 0%;
+            flex-basis: 100%;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0
+        }
+    }
+
+
+</style>

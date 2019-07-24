@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_GiaoDienDangNhap">
+   <children>
+      <TextField fx:id="username" layoutX="130.0" layoutY="106.0" prefHeight="26.0" prefWidth="232.0" promptText="UserName" />
+      <Label layoutX="103.0" layoutY="24.0" text="GYM CENTER" textFill="#214339">
+         <font>
+            <Font name="Segoe Script" size="39.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="130.0" layoutY="154.0" prefHeight="26.0" prefWidth="232.0" promptText="PassWord" />
+      <Button fx:id="dangnhap" layoutX="131.0" layoutY="237.0" mnemonicParsing="false" onAction="#kiemtradangnhap" prefHeight="32.0" prefWidth="232.0" text="Đăng Nhập" />
+      <Button fx:id="quenmatkhau" layoutX="258.0" layoutY="198.0" mnemonicParsing="false" onAction="#quenmatkhau" text="Quên mật khẩu" />
+      <Button fx:id="dangkytaikhoan" layoutX="131.0" layoutY="277.0" mnemonicParsing="false" onAction="#GD_DK" prefHeight="32.0" prefWidth="232.0" text="Đăng Ký" />
+   </children>
+</AnchorPane>

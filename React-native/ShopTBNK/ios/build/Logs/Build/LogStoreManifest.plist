@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>2B2E34BA-9BE6-4F56-BF6B-06127052B5F2</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2B2E34BA-9BE6-4F56-BF6B-06127052B5F2.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ThitBoNhapKhau project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ThitBoNhapKhau</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project ThitBoNhapKhau with scheme ThitBoNhapKhau and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>585607744.33142805</real>
+			<key>timeStoppedRecording</key>
+			<real>585607745.31542206</real>
+			<key>title</key>
+			<string>Building project ThitBoNhapKhau with scheme ThitBoNhapKhau and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>2B2E34BA-9BE6-4F56-BF6B-06127052B5F2</string>
+		</dict>
+		<key>E6D5074F-7AD1-4267-A4AE-33F0A1318C5A</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E6D5074F-7AD1-4267-A4AE-33F0A1318C5A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ThitBoNhapKhau project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ThitBoNhapKhau</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project ThitBoNhapKhau with scheme ThitBoNhapKhau and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>585605466.73231304</real>
+			<key>timeStoppedRecording</key>
+			<real>585605471.81138802</real>
+			<key>title</key>
+			<string>Building project ThitBoNhapKhau with scheme ThitBoNhapKhau and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>E6D5074F-7AD1-4267-A4AE-33F0A1318C5A</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

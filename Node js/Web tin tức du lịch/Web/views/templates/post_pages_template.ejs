@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Đánh dấu siêu dữ liệu đã được thêm bởi Trình trợ giúp đánh dấu dữ liệu có cấu trúc của Google. -->
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description"
+          content="<%=Description%>"/>
+    <meta name="keywords"
+          content="<%=Keywords%>"/>
+    <meta name="author" content="<%= domain %>"/>
+    <link rel="canonical" href="https://thongtindulich.azurewebsites.net/<%=Url%>"/>
+    <title><%= FullTitle %></title>
+    <% include ../partials/first_external_library %>
+
+</head>
+
+<body id="pagetop">
+    <% include ../partials/homepage_nav %>
+    <!--  Page Content  -->
+    <div class="container card border-0 shadow  " style="margin-top: 180px;">
+        <div class="row card-body">
+            <!--  Post Content Column  -->
+            <div class="col-lg-12">
+                <!--  Title  -->
+                <span itemscope itemtype="http://schema.org/Article"
+                      itemref="_articleSection5 _articleSection6 _articleBody7 _url8">
+                    <h1 id="_name1" itemprop="name"
+                        class="mt-4"><%- FullTitle.split('-')[1] %></h1>
+                    <!--  Author  -->
+                    <p class="lead">
+                        by <a href="?users=<%=PostBy%>"> <span id="_author2" itemprop="author" itemscope
+                                              itemtype="http://schema.org/Person"> <span
+                                        itemprop="name"><%=PostBy%></span></span></a>
+                    </p>
+                    <hr/>
+                    <!--  Date/Time  -->
+                    <p>Posted on <span id="_datePublished3" itemprop="datePublished" content="<%=DateCreated%>"><%=DateCreated%></span></p>
+                    <hr/>
+                    <!--  Preview Image  -->
+                    <figure class="text-center">
+                        <meta itemprop="image"
+                              content="https://thongtindulich.azurewebsites.net/images/vung-tau-nhin-tu-tren-cao.webp">
+                        <a> <img class="img-fluid rounded" src="<%=IconUrl%>"
+                                 alt="<%=Title%>"/> </a>
+                        <figcaption class="text-muted"><%=Title%></figcaption>
+                    </figure>
+                </span>
+                <hr/>
+                <!--  Post Content  -->
+                <%-PostContent%>
+            </div>
+            <% include ../partials/archor_test_relevant_post.ejs %>
+            <div class="relevant_post col-lg-12">
+                <h3>Đọc thêm</h3>
+                <ul>
+                    <li><a href="<%=HostName%>/post/du-lich-phan-thiet">Thông tin du lịch
+                                                                                                   thêm về Phan
+                                                                                                   Thiết</a>
+                    </li>
+                </ul>
+            </div>
+            <% include ../partials/comment %>
+        </div>
+
+    </div>
+    <% include ../partials/footer %>
+    <% include ../partials/last_external_library %>
+</body>
+</html>

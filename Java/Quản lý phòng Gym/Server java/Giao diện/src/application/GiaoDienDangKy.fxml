@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="301.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_GiaoDienDangKy">
+   <children>
+      <TextField fx:id="username" layoutX="79.0" layoutY="99.0" prefHeight="25.0" prefWidth="326.0" promptText="User Name" />
+      <Button fx:id="dangky" layoutX="182.0" layoutY="195.0" mnemonicParsing="false" onAction="#dangky" text="Đăng Ký">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="95.0" layoutY="25.0" text="GYM CENTER" textFill="#214339">
+         <font>
+            <Font name="Segoe Script" size="39.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="79.0" layoutY="138.0" prefHeight="25.0" prefWidth="326.0" promptText="Pass Word" />
+   </children>
+</AnchorPane>

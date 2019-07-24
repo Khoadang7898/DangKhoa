@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cộng đồng cung cấp Thông tin du lịch bốn phương Việt Nam hấp dẫn chất lượng hàng đầu Đông Nam Á - Chuyên trang cung cấp thông tin du lịch Việt Nam :
+          Du lịch Đà Lạt, Kinh nghiệm du lịch Đà Lạt, Du lịch Hà Nội, Du lịch Huế, Du lịch Đà Nẵng, Du lịch Quảng Bình, Du lịch Nha Trang, Du lịch Phan Thiết, Du lịch SaPa, Du lịch Vũng Tàu">
+    <meta name="author" content="<%= domain %>">
+    <meta name="keywords"
+          content="Thông tin du lịch, Cẩm nang du lịch, Kinh nghiệm du lịch, Thông tin du lịch bốn phương Việt Nam hấp dẫn chất lượng hàng đầu Đông Nam Á">
+    <link rel="canonical" href="https://thongtindulich.azurewebsites.net/user/account-manager">
+    <!--Verify Google Master Tool -->
+    <meta name="google-site-verification" content="_qsaaDP9sVp1Z0hVtj-tGKbViCma_oqvl5p7Fjzxo8o"/>
+    <title>Trang quản lý tài khoản - Tổng quan</title>
+    <script>
+        function tai_lai_trang() {
+            location.reload();
+        }
+    </script>
+
+    <!--Thêm thư viện css & js-->
+    <%- include ../partials/account_manager_first_library.ejs %>
+
+</head>
+
+<body class="">
+
+<div class="wrapper ">
+    <!--Thêm navBar-->
+    <%- include ../partials/navBar_account_manager.ejs %>
+    <!-- <div class="panel-header panel-header-lg">
+
+<canvas id="bigDashboardChart"></canvas>
+
+
+</div> -->
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="nc-icon nc-globe text-warning"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                    <p class="card-category">Dung lượng</p>
+                                    <p class="card-title">5GB
+                                    <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <button type="reset" class="btn-link" onclick="tai_lai_trang() "><i
+                                        class="fa fa-refresh"></i> Cập nhật
+                            </button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="nc-icon nc-money-coins text-success"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                    <p class="card-category">Lợi nhuận</p>
+                                    <p class="card-title">$ 1
+                                    <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <button type="reset" class="btn-link" onclick="tai_lai_trang() "><i
+                                        class="fa fa-refresh"></i> Cập nhật
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="fa fa-book text-danger" aria-hidden="true "></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                    <p class="card-category">Số bài viết</p>
+                                    <p class="card-title"><%= soluongbaiviet %>
+                                    <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <button type="reset" class="btn-link" onclick="tai_lai_trang() "><i
+                                        class="fa fa-refresh"></i> Cập nhật
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="fa fa-eye text-primary" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                    <p class="card-category">Số lượt xem</p>
+                                    <p class="card-title"><%= luotxem %>
+                                    <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <button type="reset" class="btn-link" onclick="tai_lai_trang() "><i
+                                        class="fa fa-refresh"></i> Cập nhật
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="fa fa-thumbs-o-up text-success" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                    <p class="card-category">Số lượt thích</p>
+                                    <p class="card-title"><%= luotthich %>
+                                    <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <button type="reset" class="btn-link" onclick="tai_lai_trang() "><i
+                                        class="fa fa-refresh"></i> Cập nhật
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="fa fa-share-alt text-info" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                    <p class="card-category">Số lượt chia sẻ</p>
+                                    <p class="card-title"><%= luotchiase %>
+                                    <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <button type="reset" class="btn-link" onclick="tai_lai_trang() "><i
+                                        class="fa fa-refresh"></i> Cập nhật
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="nc-icon nc-favourite-28 text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                    <p class="card-category">Người theo dõi</p>
+                                    <p class="card-title">0
+                                    <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <button type="reset" class="btn-link" onclick="tai_lai_trang() "><i
+                                        class="fa fa-refresh"></i> Cập nhật
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Thêm footer-->
+        <%- include ../partials/footer_account_manager.ejs %>
+    </div>
+</div>
+</div>
+<%- include ../partials/account_manager_last_library.ejs %>
+</body>
+
+</html>

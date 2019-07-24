@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title> 3manuit</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/resume.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">
+      <button type="button" onClick="sendMsg()" class="btn btn-danger">Run</button></span>
+      <span class="d-none d-lg-block">
+        <img onClick="sendMsg()" class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/img/run.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ 
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+    <div style="float: left;
+              width: 40%;">
+      <div class="w-100">
+        <h3 class="mb-0"> Quy Trinh: 
+        </h3>
+        <div class="subheading mb-5" id='qt'>
+
+          
+
+        </div>
+        <div id="loading1" class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+      </div> 
+    </div>
+    <div style="float: right;
+                width: 60%;">
+      <h3>
+          Thong so:
+      </h3>
+      <div id="ts">
+      
+      </div>
+      <div id="loading2" class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <div style="width: 100%;">
+        <div> <h3>
+
+          Ket Qua
+        </h3> 
+        <div id="kq">
+        <div class="container">
+          <form action="/upload-file" method="POST" enctype="multipart/form-data">
+            <div class="form-group row">
+              <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+              <div class="col-sm-1-12">
+                <input type="file" class="form-control" name="filename" id="inputName" placeholder="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        </div>
+        <div id="loading3" class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  
+   <script src="http://cdn.socket.io/stable/socket.io.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js'"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="static/js/resume.min.js"></script>
+  <script src="static/jquery-3.4.1.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script>
+      const socket = io("http://localhost:8080");
+      function sendMsg() {
+        var a =true;
+        socket.emit("message", "HELLO WORLD");
+      }
+      socket.on("print_qt",function(data){
+            $('#qt').append(`<p>`+data+` </p>`)
+        })
+
+        socket.on("print_ts",function(data){
+          $('#ts').append(`<p>`+data+` </p>`)
+      })
+      socket.on('hinhh1',function(data){
+        $('#kq').append(`<img src="static/img/ConfusionMatrix.png">`)
+      })
+      socket.on('hinhh2',function(data){
+        $('#kq').append(`<img src="static/img/22.png">`)
+      })
+      socket.on("print_kq",function(data){
+        $('#loading1').remove()
+        $('#loading2').remove()
+        $('#loading3').remove()
+        $('#kq').append(`<p>`+data+` </p>`)
+    })  
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_GiaoDienBoss">
+   <children>
+      <Label layoutX="188.0" layoutY="27.0" text="Chuẩn đoán thông tin cơ thể" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="232.0" prefHeight="17.0" prefWidth="93.0" text="Tình trạng cơ thể" />
+      <TextField fx:id="proteinmin" layoutX="262.0" layoutY="324.0" prefHeight="25.0" prefWidth="107.0" />
+      <Label layoutX="150.0" layoutY="328.0" prefHeight="17.0" prefWidth="93.0" text="Lượng protein" />
+      <TextField fx:id="proteinmax" layoutX="448.0" layoutY="324.0" prefHeight="25.0" prefWidth="107.0" />
+      <Label layoutX="150.0" layoutY="366.0" prefHeight="17.0" prefWidth="93.0" text="Lượng fat" />
+      <Label layoutX="150.0" layoutY="405.0" prefHeight="17.0" prefWidth="93.0" text="Lượng cards" />
+      <Label layoutX="238.0" layoutY="273.0" text="Dinh dưỡng cần nạp" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="cothe" layoutX="276.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="220.13671875" />
+      <TextArea layoutX="101.0" layoutY="87.0" prefHeight="117.0" prefWidth="255.0" text="---&gt; Bạn thuộc kiểu người nào:&#10;0. Ít hoặc không vận động&#10;1. Vận động nhẹ: 1-3 lần/1 tuần&#10;2. Vận động vừa phải: 3-5 lần/ 1 tuần&#10;3. Vận động nhiều: 6-7 lần/1 tuần&#10;4. Vận động nặng: Trên 7 lần 1 tuần" />
+      <TextField fx:id="luachon" layoutX="369.0" layoutY="87.0" onAction="#chuandoan" prefHeight="25.0" prefWidth="207.0" promptText="Nhập lựa chọn" />
+      <Text layoutX="383.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------&gt;" wrappingWidth="47.0" />
+      <TextField fx:id="fatmmin" layoutX="264.0" layoutY="362.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="fatmax" layoutX="450.0" layoutY="362.0" prefHeight="25.0" prefWidth="107.0" />
+      <Text layoutX="385.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------&gt;" wrappingWidth="47.0" />
+      <TextField fx:id="cardsmin" layoutX="265.0" layoutY="401.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="cardsmax" layoutX="451.0" layoutY="401.0" prefHeight="25.0" prefWidth="107.0" />
+      <Text layoutX="386.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------&gt;" wrappingWidth="47.0" />
+   </children>
+</AnchorPane>

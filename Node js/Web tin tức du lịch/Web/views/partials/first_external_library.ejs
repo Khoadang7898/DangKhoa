@@ -1,0 +1,87 @@
+
+<!----------------------------------------Thư viện UI Version 02------------------------------------------------------>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="/css/main_styles.css">
+<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+
+<!-- Icon -font awesome v.59-->
+<script src="https://kit.fontawesome.com/e4f6f2d4f1.js"></script>
+
+
+<!----------------------------------------Thư viện UI Version 01------------------------------------------------------>
+<!-- Include style internal-->
+<%- include ../partials/style_critical.ejs%>
+
+<!-- Plugin CSS -->
+<link href="/vendor/magnific-popup/magnific-popup.css" rel="preload" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="/vendor/magnific-popup/magnific-popup.css" rel="stylesheet"></noscript>
+
+<!--&lt;!&ndash; Theme CSS - Includes Bootstrap &ndash;&gt;-->
+<!--<link href="/css/creative.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">-->
+<!--<noscript><link href="/css/creative.css" rel="stylesheet"></noscript>-->
+<!--<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>-->
+
+<!----------------------------------------Thư viện UI Login & Sign Up & Forgot Password-->
+
+<!-----------------------------------------Code Google Analytics--------------------------------------------------->
+<!-- Global site tag (gtag.javascript) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139952289-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139952289-1');
+</script>
+
+
+<!--Script search ang style search-->
+<script>
+
+    function search(){
+        $.ajax({
+            url: '/search',
+            data: {
+                datainput: $('#term').val()
+            },
+            error: function() {
+                $('#info').html('Không tìm thấy');
+            },
+            dataType: 'json',
+            success: function(data) {
+
+                console.log(data.data)
+
+                text="<div class=\"topresult\">Top Result</div>";
+                if($('#term').val()==""){
+                    $("#info").html(text)
+                    return
+                }
+                text+="<div class=\"result\">"
+
+                for(i = 0; i <data.data.length;i++)
+                {
+                    //  text+="<a href=\""+data.data[i].url+"\">"+
+                    //    "<div><img src=\""+1+"\" alt=\""+data.data[i].key+"\"></div></a>"
+                    text+="<div><a  style=\"color: black\" href=\""+data.data[i].url+"\">"+data.data[i].key+"</a></div>"
+                }
+                text+="</div>"
+                console.log(data.data.length)
+
+                $("#info").html(text)
+
+
+            },
+            type: 'POST'
+        });
+    }
+</script>

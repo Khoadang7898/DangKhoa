@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="480.0" prefWidth="512.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label layoutX="48.0" layoutY="44.0" text="Học và tên" />
+      <TextField layoutX="207.0" layoutY="40.0" prefHeight="25.0" prefWidth="270.0" />
+      <Button layoutX="208.0" layoutY="387.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Lưu" />
+      <Label layoutX="49.0" layoutY="201.0" text="Sđt" />
+      <Label layoutX="48.0" layoutY="164.0" prefHeight="17.0" prefWidth="38.0" text="Địa chỉ" />
+      <ChoiceBox id="nam" fx:id="nam" layoutX="420.0" layoutY="123.0" prefHeight="25.0" prefWidth="57.0" />
+      <Label layoutX="387.0" layoutY="127.0" text="Năm" />
+      <ChoiceBox id="thang" fx:id="thang" layoutX="332.0" layoutY="123.0" prefHeight="25.0" prefWidth="38.0" />
+      <Label layoutX="290.0" layoutY="127.0" text="Tháng" />
+      <Label layoutX="206.0" layoutY="127.0" text="Ngày" />
+      <Label layoutX="47.0" layoutY="127.0" text="Ngày tháng năm sinh" />
+      <Label layoutX="47.0" layoutY="88.0" text="Giới tính" />
+      <ChoiceBox id="ngay" fx:id="ngay" layoutX="239.0" layoutY="123.0" prefHeight="25.0" prefWidth="38.0" />
+      <CheckBox layoutX="283.0" layoutY="88.0" mnemonicParsing="false" text="Nữ" />
+      <CheckBox layoutX="208.0" layoutY="88.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="61.0" text="Nam" />
+      <TextField layoutX="206.0" layoutY="197.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField layoutX="206.0" layoutY="160.0" prefHeight="25.0" prefWidth="270.0" />
+      <Label layoutX="47.0" layoutY="240.0" text="Chức vụ" />
+      <TextField layoutX="206.0" layoutY="236.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField layoutX="206.0" layoutY="273.0" prefHeight="25.0" prefWidth="270.0" />
+      <Label layoutX="47.0" layoutY="277.0" text="Hệ số lương" />
+      <Label layoutX="47.0" layoutY="314.0" text="Lương cơ bản" />
+      <TextField layoutX="206.0" layoutY="310.0" prefHeight="25.0" prefWidth="270.0" />
+   </children>
+</AnchorPane>
