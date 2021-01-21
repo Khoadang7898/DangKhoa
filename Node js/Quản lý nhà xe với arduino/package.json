@@ -22,7 +22,7 @@
     "openssl": "^1.1.0",
     "passport": "^0.4.0",
     "passport-facebook-token": "^3.3.0",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "socketio-wildcard": "^2.0.0",
     "ssl": "^1.0.0"
   },
