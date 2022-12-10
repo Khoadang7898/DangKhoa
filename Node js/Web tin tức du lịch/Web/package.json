@@ -17,7 +17,7 @@
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "experss": "0.0.1-security",
-    "express": "~4.16.1",
+    "express": "~4.17.3",
     "express-htaccess-middleware": "^0.1.0",
     "express-session": "^1.16.2",
     "express-urlrewrite": "^1.2.0",
